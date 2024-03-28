@@ -26,7 +26,7 @@
         ['#supporting-dom-elements', 'Supporting DOM elements'],
         ['#notes', 'Special Notes']
     ];
-    eval(files['tutorials.js']);
+    files['tutorials.js'];
     marked.setOptions({
         gfm: true,
         tables: true
@@ -327,9 +327,8 @@
                     gridParent.style.height = '300px';
                     error.style.display = 'none';
                     try {
-                        eval('(function (parentNode) {'
-                            + aceEditor.getValue()
-                            + '}(gridParent));');
+                        var func = new Function('parentNode', '(' + aceEditor.getValue() + ')');
+                        func(gridParent)
                     } catch (e) {
                         error.style.display = 'block';
                         error.innerHTML = 'Error<br><span class="tutorial-error-msg">'

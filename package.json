@@ -1,7 +1,7 @@
 {
-  "name": "canvas-datagrid",
+  "name": "canvas-datagrid-w2c",
   "version": "0.4.7",
-  "description": "Canvas based data grid web component. Capable of displaying millions of contiguous hierarchical rows and columns without paging or loading, on a single canvas element.",
+  "description": "Fork from canvas-datagrid. Removed eval and dropped ES5 only browser support.",
   "main": "./dist/canvas-datagrid.js",
   "module": "./dist/canvas-datagrid.module.js",
   "scripts": {
